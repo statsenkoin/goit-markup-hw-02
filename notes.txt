@@ -46,6 +46,10 @@ p #757575
 фон #2196F3
 текст #FFFFFF
 ---
+borders #EEEEEE
+line #ECECEC
+---
+
 color-background-primary #FFFFFF
 color-background-secondary #F5F4FA
 color-background-footer #2f303a
@@ -55,7 +59,8 @@ color-text-contacts rgba(255, 255, 255, 0.6)
 color-text-secondary #FFFFFF
 color-logo #000000
 color-accent #2196F3
-
+color-cart-border #EEEEEE
+color-header-line #ECECEC
 =============== Google Fonts ======================================
 
 ІНФО по rel="preconnect" тут 
