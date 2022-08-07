@@ -118,7 +118,7 @@ body {
 }
 
 .button-hero {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-main);
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -161,7 +161,7 @@ body {
   border-radius: 4px;
   border-style: none;
 
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-main);
   font-style: normal;
 
   font-weight: 500;
