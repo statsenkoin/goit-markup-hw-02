@@ -1,8 +1,5 @@
 ======== TODO: =============================
 
-/* Основний шрифт */
-text-align: center;
-
 --------index.html---------------------------
 
 <!-- Особливості (прихований заголовок) -->
@@ -49,7 +46,6 @@ p #757575
 borders #EEEEEE
 line #ECECEC
 ---
-
 color-background-primary #FFFFFF
 color-background-secondary #F5F4FA
 color-background-footer #2f303a
@@ -61,7 +57,8 @@ color-logo #000000
 color-accent #2196F3
 color-cart-border #EEEEEE
 color-header-line #ECECEC
-=============== Google Fonts ======================================
+
+=============== Google Fonts ===========================================
 
 ІНФО по rel="preconnect" тут 
 https://web.dev/i18n/ru/uses-rel-preconnect/ 
@@ -76,7 +73,8 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preconnect.
     href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&
     family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-CSS rules to specify families
+-------
+CSS rules to specify families:
 
 font-family: 'Raleway', sans-serif; font-family: 'Roboto', sans-serif;
-====================================================================
+========================================================================
