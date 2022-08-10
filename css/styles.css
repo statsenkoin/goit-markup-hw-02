@@ -1,38 +1,84 @@
 /* ===== Глобальні налаштування стилів ===== */
 
-body {
+:root {
   /* Кольори сайту */
 
   --color-background-primary: #ffffff;
   --color-background-secondary: #f5f4fa;
   --color-background-footer: #2f303a;
-  --color-text-primary: #757575;
-  --color-text-title: #212121;
-  --color-text-contacts: rgba(255, 255, 255, 0.6);
-  --color-text-secondary: #ffffff;
-  --color-logo: #000000;
-  --color-accent: #2196f3;
   --color-card-border: #eeeeee;
   --color-header-line: #ececec;
+
+  --color-text-main: #757575;
+  --color-text-secondary: #ffffff;
+  --color-text-title: #212121;
+  --color-text-contacts: rgba(255, 255, 255, 0.6);
+  --color-text-accent: #2196f3;
+
+  --color-logo-header: #000000;
+  --color-logo-footer: #ffffff;
+  --color-logo-accent: #2196f3;
+
+  --color-button-background: #f5f4fa;
+  --color-button-text: #212121;
+  --color-button-background-focus: #2196f3;
+  --color-button-text-focus: #ffffff;
+  --color-button-logo-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --color-button-filter-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 
   /* Шрифти сайту */
 
   --font-main: 'Roboto', sans-serif;
   --font-logo: 'Raleway', sans-serif;
-
+}
+body {
   /* Основний шрифт */
 
   font-family: var(--font-main);
-  font-style: normal;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--color-text-primary);
+  color: var(--color-text-main);
 
   /* Основниий фон */
 
   background-color: var(--color-background-primary);
+}
+
+/* Ховаємо заголовки */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Перевизначення для окремих селекторів */
+
+button {
+  font-family: var(--font-main);
+  font-style: normal;
+  color: var(--color-text-title);
+  cursor: pointer;
+  border-radius: 4px;
+  border-style: none;
+  background-color: var(--color-button-background);
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
 }
 
 /* ===== Блоки header + footer ===== */
@@ -42,20 +88,19 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  color: var(--color-accent);
+  color: var(--color-logo-accent);
   text-decoration: none;
 }
 
 .logo-header {
-  color: var(--color-logo);
+  color: var(--color-logo-header);
 }
 
 .logo-footer {
-  color: var(--color-text-secondary);
+  color: var(--color-logo-footer);
 }
 
-.menu-list .link,
-.contact-list .link {
+.header-line .link {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -66,32 +111,26 @@ body {
 }
 
 .contact-list .link {
-  color: var(--color-text-primary);
+  color: var(--color-text-main);
 }
 
-.map {
+.footer-line address {
+  font-style: normal;
+}
+
+.link.location {
   color: var(--color-text-secondary);
-  font-style: normal;
 }
 
-.mail,
-.tel {
+.link.mail,
+.link.tel {
   color: var(--color-text-contacts);
-  font-style: normal;
-}
-
-.link {
-  text-decoration: none;
-}
-
-.list-item {
-  list-style: none;
 }
 
 .link.current,
 .link:hover,
 .link:focus {
-  color: var(--color-accent);
+  color: var(--color-text-accent);
 }
 
 .footer-line {
@@ -117,22 +156,17 @@ body {
 }
 
 .button-hero {
-  background: var(--color-accent);
-  border-radius: 4px;
-  border-style: none;
-  font-family: var(--font-main);
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
   text-align: center;
-  color: var(--color-text-secondary);
 }
 
 .button-hero:hover,
 .button-hero:focus {
-  cursor: pointer;
+  color: var(--color-text-secondary);
+  background-color: var(--color-button-background-focus);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -144,6 +178,11 @@ body {
   color: var(--color-text-title);
 }
 
+.feature-description {
+  font-weight: 400;
+  line-height: 1.71;
+}
+
 .activity-title,
 .team-title {
   font-weight: 700;
@@ -151,10 +190,6 @@ body {
   line-height: 1.67;
   text-align: center;
   color: var(--color-text-title);
-}
-
-.team {
-  background-color: var(--color-background-secondary);
 }
 
 .team-member {
@@ -171,33 +206,28 @@ body {
   text-align: center;
 }
 
+.team {
+  background-color: var(--color-background-secondary);
+}
+
 /* Блок main в portfolio.html */
 
 .filter-list .button {
-  background: var(--color-background-secondary);
-  border-radius: 4px;
-  border-style: none;
-  font-family: var(--font-main);
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
   text-align: center;
-  color: var(--color-text-title);
-  cursor: pointer;
 }
 
 .filter-list .button:hover,
 .filter-list .button:focus {
-  background: var(--color-accent);
-  color: var(--color-text-secondary);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+  color: var(--color-button-text-focus);
+  background-color: var(--color-button-background-focus);
+  box-shadow: var(--color-button-filter-shadow);
 }
 
-.product-title {
+.project-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -205,7 +235,8 @@ body {
   color: var(--color-text-title);
 }
 
-.product-description {
+.project-description {
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
 }
