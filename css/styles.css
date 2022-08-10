@@ -23,6 +23,8 @@
   --color-button-text: #212121;
   --color-button-background-focus: #2196f3;
   --color-button-text-focus: #ffffff;
+  --color-button-logo-background: #2196f3;
+  --color-button-logo-background-focus: #188ce8;
   --color-button-logo-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   --color-button-filter-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -66,11 +68,9 @@ body {
 button {
   font-family: var(--font-main);
   font-style: normal;
-  color: var(--color-text-title);
   cursor: pointer;
   border-radius: 4px;
   border-style: none;
-  background-color: var(--color-button-background);
 }
 
 .link {
@@ -161,13 +161,14 @@ button {
   line-height: 1.88;
   letter-spacing: 0.06em;
   text-align: center;
+  color: var(--color-button-text-focus);
+  background-color: var(--color-button-logo-background);
+  box-shadow: var(--color-button-logo-shadow);
 }
 
 .button-hero:hover,
 .button-hero:focus {
-  color: var(--color-text-secondary);
-  background-color: var(--color-button-background-focus);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: var(--color-button-logo-background-focus);
 }
 
 .feature-title {
@@ -218,6 +219,8 @@ button {
   line-height: 1.62;
   letter-spacing: 0.03em;
   text-align: center;
+  color: var(--color-text-title);
+  background-color: var(--color-button-background);
 }
 
 .filter-list .button:hover,
