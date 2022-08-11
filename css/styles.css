@@ -111,7 +111,8 @@ button {
 }
 
 .contact-list .link {
-  color: var(--color-text-main);
+  /* color: var(--color-text-main); */
+  color: inherit;
 }
 
 .footer-line address {
